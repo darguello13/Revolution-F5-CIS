@@ -23,7 +23,7 @@ data:
              "template": "generic",
              "ingress": {
                 "class": "Service_TCP",
-                "virtualAddresses": ["10.1.10.10"],
+                "virtualAddresses": ["10.0.2.4"],
                "remark":"ingress: f5demo.tcp.v1",
 
                "virtualPort": 80,
