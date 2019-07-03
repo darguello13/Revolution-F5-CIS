@@ -1,17 +1,21 @@
-apiVersion: apps/v1
+apiVerkubesion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nginx-web-service
+  name: my-frontend-api
 spec:
-  selector:
-    matchLabels:
-      run: web-service
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
-        run: web-service
+        run: my-frontend-api
     spec:
       containers:
-        - name: nginx
-          image: nginx
+      - image: "diegoarg/acme-api-demo:v0.2"
+        env:
+        - name: F5DEMO_APP
+          value: "frontend"
+        imagePullPolicy: IfNotPresent
+        name: my-frontend
+        ports:
+        - containerPort: 3000
+          protocol: TCP
