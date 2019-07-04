@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: web-api
+  namespace: default
+  labels:
+    cis.f5.com/as3-tenant: AS3
+    cis.f5.com/as3-app: MyApps
+    cis.f5.com/as3-pool: acme_api_pool
+spec:
+  selector:
+    app: web-api
+  ports:
+    - port: 3000
+      targetPort: 3000
+  type: NodePort
