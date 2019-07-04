@@ -36,7 +36,7 @@ data:
              "template": "generic",
              "ingress": {
                 "class": "Service_HTTP",
-                "virtualAddresses": ["10.0.2.4"],
+                "virtualAddresses": ["10.1.10.100"],
 
                "virtualPort": 80,
                "remark":"ingress: f5demo.waf.http.v1",
@@ -62,7 +62,7 @@ data:
              },
              "acme_api": {
                 "class": "Service_HTTP",
-                "virtualAddresses": ["10.0.2.4"],
+                "virtualAddresses": ["10.1.10.100"],
 
                "virtualPort": 8081,
                "remark":"ingress: f5demo.waf.http.v1",
