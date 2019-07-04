@@ -112,7 +112,7 @@ spec:
         - --insecure
         - "true"
         - --pool-member-type
-        - "cluster"
+        - "nodeport"
       volumes:
       - name: bigip-creds
         secret:
