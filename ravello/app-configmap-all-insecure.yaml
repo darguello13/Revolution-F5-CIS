@@ -53,7 +53,7 @@ data:
                    "servicePort": 3000,
                    "serverAddresses": []
                 }]
-             },
+             }
             }
           }
         }
