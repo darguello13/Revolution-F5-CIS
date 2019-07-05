@@ -8,7 +8,7 @@ metadata:
     as3: "true"
 data:
   template: |
-    {
+   {
       "class": "AS3",
       "declaration": {
         "class": "ADC",
@@ -21,7 +21,6 @@ data:
           "MyApps": {
              "class": "Application",
              "template": "generic",
-             },
              "ingress": {
                 "class": "Service_TCP",
                 "virtualAddresses": ["10.1.10.100"],
@@ -38,25 +37,26 @@ data:
                    "serverAddresses": []
                 }]
              },
-             
-           "acme_api": {
-                "class": "Service_HTTP",
+             "acme_api": {
+                "class": "Service_TCP",
                 "virtualAddresses": ["10.1.10.100"],
+               "remark":"ingress: f5demo.tcp.v1",
 
                "virtualPort": 8081,
-               "remark":"ingress: f5demo.waf.http.v1",
-               "pool": "acme_api_pool",
-               
-              },
+                "pool": "ingress_pool"
+             },
              "acme_api_pool": {
                 "class": "Pool",
-                "monitors": ["tcp"],
+                "monitors": [ "tcp" ],
                 "members": [{
                    "servicePort": 3000,
                    "serverAddresses": []
                 }]
              }
-           }
+             
+             
+             
+            }
+          }
         }
-     }
     }
