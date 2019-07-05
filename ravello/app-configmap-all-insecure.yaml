@@ -38,32 +38,24 @@ data:
                 }]
              },
              
-             
-             
-             
-             "acme_api": {
+           "acme_api": {
                 "class": "Service_HTTP",
-                "virtualAddresses": ["10.0.2.4"],
+                "virtualAddresses": ["10.1.10.100"],
 
                "virtualPort": 8081,
                "remark":"ingress: f5demo.waf.http.v1",
                "pool": "acme_api_pool",
                
-              
-             },
+              },
              "acme_api_pool": {
                 "class": "Pool",
-                "monitors": [
-                   "http"
-                ],
+                "monitors": ["tcp"],
                 "members": [{
                    "servicePort": 3000,
-                   "serverAddresses": [
-                   ]
+                   "serverAddresses": []
                 }]
              }
-             
+           }
         }
-        }
-    }
+     }
     }
