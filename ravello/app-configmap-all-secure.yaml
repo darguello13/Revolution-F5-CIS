@@ -1,7 +1,7 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: nginx-plus-as3-configmap
+  name: apps-as3-configmap
   namespace: default
   labels:
     f5type: virtual-server
@@ -13,7 +13,7 @@ data:
       "declaration": {
         "class": "ADC",
         "schemaVersion": "3.1.0",
-        "id": "nginx-plus",
+        "id": "f5-hello-world",
         "label": "CIS AS3 Example",
         "remark": "Example of using CIS",
        "Common": {
