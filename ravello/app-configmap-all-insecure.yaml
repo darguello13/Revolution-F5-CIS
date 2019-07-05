@@ -21,6 +21,7 @@ data:
           "MyApps": {
              "class": "Application",
              "template": "generic",
+             },
              "ingress": {
                 "class": "Service_TCP",
                 "virtualAddresses": ["10.1.10.100"],
