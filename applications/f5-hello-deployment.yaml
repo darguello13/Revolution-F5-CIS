@@ -5,7 +5,7 @@ metadata:
   labels:
     app: f5-hello
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: f5-hello
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: f5-hello
-        image: f5devcentral/f5-hello-world
+        image: f5devcentral/f5-hello-world:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
