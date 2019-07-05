@@ -42,7 +42,7 @@ data:
                "remark":"ingress: f5demo.waf.http.v1",
                "pool": "ingress_pool",
                "profileHTTP":{"use": "/Common/Shared/XFF_HTTP_Profile"},
-               "policyWAF":{"bigip":"/Common/linux-high"},
+               "policyWAF":{"bigip":"/Common/WAF_DevOps"},
                "securityLogProfiles": [
                {
                  "bigip": "/Common/Log all requests"
@@ -68,7 +68,7 @@ data:
                "remark":"ingress: f5demo.waf.http.v1",
                "pool": "acme_api_pool",
                "profileHTTP":{"use": "/Common/Shared/XFF_HTTP_Profile"},
-               "policyWAF":{"bigip":"/Common/linux-high"},
+               "policyWAF":{"bigip":"/Common/WAF_DevOps"},
                "securityLogProfiles": [
                {
                  "bigip": "/Common/Log all requests"
