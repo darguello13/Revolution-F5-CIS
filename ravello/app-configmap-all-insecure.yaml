@@ -48,13 +48,8 @@ data:
                "virtualPort": 8081,
                "remark":"ingress: f5demo.waf.http.v1",
                "pool": "acme_api_pool",
-               "profileHTTP":{"use": "/Common/Shared/XFF_HTTP_Profile"},
-               "policyWAF":{"bigip":"/Common/linux-high"},
-               "securityLogProfiles": [
-               {
-                 "bigip": "/Common/Log all requests"
-               }
-               ]
+               
+              
              },
              "acme_api_pool": {
                 "class": "Pool",
