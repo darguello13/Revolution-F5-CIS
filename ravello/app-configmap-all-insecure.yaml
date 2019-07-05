@@ -38,15 +38,15 @@ data:
                 }]
              },
              
-              "acme-api": {
+              "acme_api": {
                 "class": "Service_TCP",
                 "virtualAddresses": ["10.1.10.100"],
                "remark":"ingress: f5demo.tcp.v1",
 
                "virtualPort": 8081,
-                "pool": "acme-api_pool"
+                "pool": "acme_api_pool"
              },
-               "acme-api_pool": {
+               "acme_api_pool": {
                 "class": "Pool",
                 "monitors": [ "tcp" ],
                 "members": [{
