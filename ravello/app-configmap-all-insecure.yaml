@@ -43,7 +43,7 @@ data:
                "remark":"ingress: f5demo.tcp.v1",
 
                "virtualPort": 8081,
-                "pool": "ingress_pool"
+                "pool": "acme_appi_pool"
              },
              "acme_api_pool": {
                 "class": "Pool",
