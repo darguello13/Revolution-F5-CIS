@@ -55,7 +55,7 @@ data:
                    "http"
                 ],
                 "members": [{
-                   "servicePort": 80,
+                   "servicePort": 8080,
                    "serverAddresses": [
                    ]
                 }]
