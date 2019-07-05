@@ -18,4 +18,4 @@ spec:
       - name: f5-hello-world
         image: f5devcentral/f5-hello-world:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
