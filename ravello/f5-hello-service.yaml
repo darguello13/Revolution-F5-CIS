@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: f5-hello
+  name: f5-hello-world
   namespace: default
   labels:
     cis.f5.com/as3-tenant: AS3
@@ -15,4 +15,4 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: f5-hello
+    app: f5-hello-world
