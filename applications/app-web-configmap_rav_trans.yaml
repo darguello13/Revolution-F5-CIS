@@ -42,7 +42,6 @@ data:
                "policyWAF": {
                    "use": "My_ASM_Policy"
                }
-#               "policyWAF":{"/Common/WAF_DevOps"},
                "securityLogProfiles": [
                {
                  "bigip": "/Common/Log all requests"
