@@ -106,7 +106,7 @@ spec:
         - --bigip-partition
         - "kubernetes"
         - --bigip-url
-        - "10.1.10.60"
+        - "10.1.10.10"
         - --flannel-name
         - "flannel_vxlan"
         - --insecure
