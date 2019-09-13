@@ -33,7 +33,7 @@ data:
                 "class": "Pool",
                 "monitors": [ "tcp" ],
                 "members": [{
-                   "servicePort": 8080,
+                   "servicePort": 80,
                    "serverAddresses": []
                 }]
              }
