@@ -64,7 +64,7 @@ data:
                 "class": "WAF_Policy",
                 "url": "https://github.com/darguello13/Revolution-F5-CIS/blob/master/WAF_Policy/Common_WAF_DevOps__2019-7-5_7-8-42__bigip1.agility-labs.io.xml",
                 "ignoreChanges": false
-                "enforcementMode": "transparent"
+                "enforcementMode": "blocking"
              }
              
              
