@@ -8,6 +8,6 @@ spec:
   containers:
   - name: web-api
     image: diegoarg/acme-api-demo:bootcamp
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     ports:
     - containerPort: 3000
