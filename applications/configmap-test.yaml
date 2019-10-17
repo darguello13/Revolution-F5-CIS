@@ -13,7 +13,7 @@ data:
       "declaration": {
         "class": "ADC",
         "schemaVersion": "3.1.0",
-        "id": "nginx-plus",
+        "id": "web-api",
         "label": "CIS AS3 Example",
         "remark": "Example of using CIS",
         "AS3": {
@@ -21,19 +21,19 @@ data:
           "MyApps": {
              "class": "Application",
              "template": "generic",
-             "ingress": {
+             "web-api": {
                 "class": "Service_TCP",
                 "virtualAddresses": ["10.2.0.4"],
-               "remark":"ingress: f5demo.tcp.v1",
+               "remark":"web-api: f5demo.tcp.v1",
 
                "virtualPort": 8081,
-                "pool": "acme_api_pool"
+               "pool": "acme_api_pool"
              },
              "acme_api_pool": {
                 "class": "Pool",
                 "monitors": [ "tcp" ],
                 "members": [{
-                   "servicePort": 80,
+                   "servicePort": 3000,
                    "serverAddresses": []
                 }]
              }
