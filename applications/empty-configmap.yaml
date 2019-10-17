@@ -11,11 +11,11 @@ data:
       "class": "AS3",
       "declaration": {
         "class": "ADC",
-        "schemaVersion": "3.1.0",
+        "schemaVersion": "3.2.0",
         "id": "nginx-plus",
         "label": "CIS AS3 Example",
         "remark": "Example of using CIS",
-        "AS3": {
+        "Backend_Tenant": {
           "class": "Tenant"
        }
     }

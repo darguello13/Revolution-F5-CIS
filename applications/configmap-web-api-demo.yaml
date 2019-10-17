@@ -16,43 +16,51 @@ data:
      "remark": "ASM_policy_external_URL",
      "Backend_Tenant": {
        "class": "Tenant",
-       "acme_api": {
-         "class": "Application",
-         "template": "http",
-         "serviceMain": {
-           "class": "Service_HTTP",
-           "virtualAddresses": [
-             "10.2.0.4"
-           ],
-           "snat": "auto",
-           "pool": "acme_api_pool",
-           "policyWAF": {
-             "use": "My_ASM_Policy"
-           },
-           "securityLogProfiles": [
-              {
-                 "bigip": "/Common/Log all requests"
-              }
-            ]
-         },
-          "Pool1": {
-           "class": "Pool",
-            "monitors": [
-             "tcp"
-           ],
-           "members": [
-            {
-               "servicePort": 3000,
-               "serverAddresses": [
+       
+       "MyApps": {
+             "class": "Application",
+             "template": "generic",
+       
+             "acme_api": {
+             "class": "Application",
+             "template": "http",
+             "serviceMain": {
+               "class": "Service_HTTP",
+               "virtualAddresses": [
+                  "10.2.0.4"
+                ],
+               "snat": "auto",
+               "pool": "acme_api_pool",
+               "policyWAF": {
+                  "use": "My_ASM_Policy"
+                },
+                "securityLogProfiles": [
+                 {
+                     "bigip": "/Common/Log all requests"
+                 }
+                ]
+             },
+             
+             "acme_api_pool": {
+             "class": "Pool",
+               "monitors": [
+                "tcp"
+               ],
+              "members": [
+               {
+                  "servicePort": 3000,
+                  "serverAddresses": [
+                   ]
+               },             
                ]
-            },             
-           ]
-          },
-         "My_ASM_Policy": {
-            "class": "WAF_Policy",
-           "url": "https://raw.githubusercontent.com/darguello13/Revolution-F5-CIS/master/WAF_Policy/Common_WAF_DevOps__2019-7-5_7-8-42__bigip1.agility-labs.io.xml",
-           "ignoreChanges": true
-         }
+             },
+             
+             "My_ASM_Policy": {
+               "class": "WAF_Policy",
+             "url": "https://raw.githubusercontent.com/darguello13/Revolution-F5-CIS/master/WAF_Policy/Common_WAF_DevOps__2019-7-5_7-8-42__bigip1.agility-labs.io.xml",
+             "ignoreChanges": true
+             }
+             }
+        }
        }
-     }
-   }
+    }
