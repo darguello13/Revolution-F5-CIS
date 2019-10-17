@@ -15,7 +15,7 @@ data:
         "id": "nginx-plus",
         "label": "CIS AS3 Example",
         "remark": "Example of using CIS",
-        "Backend_Tenant": {
+        "AS3": {
           "class": "Tenant"
        }
     }
